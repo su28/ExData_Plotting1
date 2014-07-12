@@ -19,7 +19,7 @@ plot4 <- function(){
     with(data,{
         plot(data$time,as.numeric(as.character(data$Global_active_power)),main = "", xlab = "", ylab = "Global Active Power (kilowatts)", type = "l")
         plot(data$time,data$Sub_metering_1,type="l",xlab="",ylab="Energy sub metering",main="")
-        legend("topright", lwd = 1,col = c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+        legend("topright", lwd = 1,col = c("black","red","blue"),cex = 0.5, legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),bty="n")
         lines(data$time,data$Sub_metering_3,col="blue",type="l")
         lines(data$time,data$Sub_metering_2,col="red",type="l")
         plot(data$time,as.numeric(as.character(data$Voltage)),main = "", xlab = "datetime", ylab = "Voltage", type = "l")
